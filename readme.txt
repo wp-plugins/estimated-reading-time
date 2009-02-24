@@ -4,7 +4,7 @@ Donate link:
 Tags: word count, reading time
 Requires at least: 2.0
 Tested up to: 2.7.1
-Stable tag: 1.2
+Stable tag: 1.3
 
 == Description ==
 
