@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Estimated Reading Time
-Plugin URI: http://www.ericjohnolson.com/blog/2009/2/23/wordpress-estimated-reading-time-plugin/
+Plugin URI: http://www.ericjohnolson.com/blog/2009/2/23/wordpress-eastimated-reading-time-plugin/
 Description: This plugin estimates the time it would take for a slightly below average reader to a slightly above average reader to read your post. It then applies the estimated reading time to the top of the post. Make sure to add <?php est_read_time(); ?> to your template.
-Version: 1.1
+Version: 1.3
 Author: Eric Olson
 Author URI: http://www.ericjohnolson.com/blog/
 */

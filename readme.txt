@@ -4,7 +4,7 @@ Donate link:
 Tags: word count, reading time
 Requires at least: 2.0
 Tested up to: 2.7.1
-Stable tag: 1.1
+Stable tag: 1.3
 
 == Description ==
 
@@ -12,7 +12,7 @@ The Estimated Reading Time plugin simply estimates and displays the time a user 
 
 == Installation ==
 
-1. Upload `estreadtime1.1.php` to the `/wp-content/plugins/` directory
+1. Upload `estreadtime.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place `<?php est_read_time(); ?>` in your templates
 
