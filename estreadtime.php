@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Estimated Reading Time
-Plugin URI: http://www.ericjohnolson.com/blog/2009/05/01/wordpress-estimated-reading-time-plugin-v14-now-with-feed-integration
+Plugin URI: http://www.ericjohnolson.com/blog/2009/05/01/wordpress-estimated-reading-time-plugin-v20-now-with-feed-integration
 Description: This plugin estimates the time it would take for a slightly below average reader to a slightly above average reader to read your post. It then applies the estimated reading time to the top of the post.
-Version: 1.4
+Version: 2.0
 Author: Eric Olson
 Author URI: http://www.ericjohnolson.com/blog/
 */
