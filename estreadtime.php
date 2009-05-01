@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Estimated Reading Time
-Plugin URI: http://www.ericjohnolson.com/blog/2009/2/23/wordpress-eastimated-reading-time-plugin/
-Description: This plugin estimates the time it would take for a slightly below average reader to a slightly above average reader to read your post. It then applies the estimated reading time to the top of the post. Make sure to add <?php est_read_time(); ?> to your template.
-Version: 1.3
+Plugin URI: http://www.ericjohnolson.com/blog/2009/05/01/wordpress-estimated-reading-time-plugin-v20-now-with-feed-integration
+Description: This plugin estimates the time it would take for a slightly below average reader to a slightly above average reader to read your post. It then applies the estimated reading time to the top of the post.
+Version: 2.0
 Author: Eric Olson
 Author URI: http://www.ericjohnolson.com/blog/
 */
@@ -25,13 +25,33 @@ Author URI: http://www.ericjohnolson.com/blog/
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-function est_read_time() { 
-   $wordcount = round(str_word_count(get_the_content()), -2);
-   $minutes_fast = ceil($wordcount / 250);
-   $minutes_slow = ceil($wordcount / 150);
-   
-   if ($wordcount <= 150) {echo "Reading time: < 1 minute";} else {echo "Reading time: $minutes_fast - $minutes_slow minutes";
-   }
- }
+if (!function_exists('est_read_time')):
+function est_read_time( $return = false) {
+	$wordcount = round(str_word_count(get_the_content()), -2);
+	$minutes_fast = ceil($wordcount / 250);
+	$minutes_slow = ceil($wordcount / 150);
+
+	if ($wordcount <= 150)
+		$output = __("Reading time: < 1 minute");
+	else
+		$output = sprintf(__("Reading time: %s - %s minutes"), $minutes_fast, $minutes_slow);
+	
+	if ($return)
+		return $output;
+	else
+		echo $output;
+}
+endif;
+
+if (!function_exists('est_the_content')):
+function est_the_content( $orig ) {
+	// Prepend the reading time to the post content
+	return est_read_time(true) . "\n\n" . $orig;
+}
+endif;
+
+if (function_exists('add_filter')):
+add_filter('the_content', 'est_the_content', 9); // Set this to priority 9 so it's called before wptextuarize / wpautop / etc
+endif;
    
 ?>
