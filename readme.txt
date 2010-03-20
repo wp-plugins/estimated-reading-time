@@ -1,10 +1,10 @@
 === Estimated Reading Time ===
-Contributors: ericolson, chmac
+Contributors: doolin, ericolson, chmac
 Donate link: 
 Tags: word count, reading time
 Requires at least: 2.0
-Tested up to: 2.7.1
-Stable tag: 2.0
+Tested up to: 2.9.2
+Stable tag: 2.1
 
 == Description ==
 
@@ -20,4 +20,11 @@ The Estimated Reading Time plugin simply estimates and displays the time a user 
 
 = How is the estimation done? =
 
-The estimation is based on a span of 150 words per minute (slightly slower than average) to 250 words per minute (slightly higher than average).  These numbers can be changed easily from within the code of the plugin (lowered to account for more complex content and raised for simpler content).  Future versions of the plugin may allow for the changing of these parameters via an "options" page.
+The estimation is based on a span of 150 words per minute 
+(slightly slower than average) to 250 words per minute 
+(slightly higher than average).  These numbers can be 
+changed easily from within the code of the plugin 
+(lowered to account for more complex content and raised 
+for simpler content).  Future versions of the plugin 
+may allow for the changing of these parameters via 
+an "options" page.
